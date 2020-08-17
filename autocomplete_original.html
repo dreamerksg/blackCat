@@ -6,23 +6,19 @@
 	<title>자동생성파일</title> <!-- css에는 autocomplet의 요소를 만들떄 필요한 css가 담겨져 있습니다. -->
 	<link rel="stylesheet" href="css/autocomplete.css"> <!-- css에는 autocomplet의 요소를 만들떄 필요한 scrpit가 담겨져 있습니다. -->
 	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
-	<script type="text/javascript" src="js/autocomplate.js"></script>
+	<script type="text/javascript" src="js/autocomplate_original.js"></script>
 	<!-- css에는 autocomplet의 요소의 샘플 json의 값이 담겨져 있습니다. -->
 	<script type="text/javascript" src="js/animal.js"></script>
 </head>
 
-<body>
+<body onload="init()">
 	<!-- 아래의 input의 값을 받을 때, 자동완성 기능이 작동합니다. -->
-	<div class="srch_form autocomplete">
-		<input id="autoInput1" placeholder="Search...">
-	</div>
-
-	<div class="srch_form autocomplete">
-		<input id="autoInput2" placeholder="Search...">
-	</div>
-
-	<script>
-		Autocomplete(document.getElementById("autoInput1"), animal);
-		Autocomplete(document.getElementById("autoInput2"), animal);
+	<div class="srch_form autocomplete"> <input id="autoInput1" placeholder="Search..."> </div>
+	<div class="srch_form autocomplete"> <input id="autoInput2" placeholder="Search..."> </div>
+	<script> // autocomplete 부분을 생성
+		window.onload = function () {
+			autocomplete.setAutocomplete(document.getElementById("autoInput1"), animal);
+			autocomplete.setAutocomplete(document.getElementById("autoInput2"), animal);
+		}
 	</script>
 </body>
