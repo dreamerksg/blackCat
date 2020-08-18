@@ -36,7 +36,7 @@ function Autocomplete(input, wordList) {
 		_parentDiv.setAttribute("class", itemsClass);
 
 		// input 아래의 div 붙이기.
-		this.parentNode.appendChild(_parentDiv);
+		this.parentNode.appendChild(_parentDiv); 
 
 
 
